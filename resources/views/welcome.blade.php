@@ -4,7 +4,7 @@
 <div class="container-fluid">
     
       <div class="row" wfd-id="3">
-        
+        <h2> MUSIQUE </h2>
         <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
