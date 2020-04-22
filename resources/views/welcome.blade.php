@@ -32,14 +32,14 @@
                 </div>
                 </div>
                 <div class="col-md-3" wfd-id="39">
-                <div class="card mb-3 shadow-sm" wfd-id="45">                         
-                    <iframe width="100%" height="225" src="https://youtu.be/oFlTD4kIqNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
-                    <div class="card-body" wfd-id="46">
+                <div class="card mb-3 shadow-sm" wfd-id="40">                         
+                <iframe width="100%" height="225" src="https://www.youtube.com/embed/oFlTD4kIqNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+                    <div class="card-body" wfd-id="41">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center" wfd-id="47">
-                        <div class="btn-group" wfd-id="48">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="72">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="71">Edit</button>
+                    <div class="d-flex justify-content-between align-items-center" wfd-id="42">
+                        <div class="btn-group" wfd-id="43">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="70">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="69">Edit</button>
                         </div>
                         <small class="text-muted">9 mins</small>
                     </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-3" wfd-id="34">
                 <div class="card mb-3 shadow-sm" wfd-id="35">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <iframe width="100%" height="225" src="https://www.youtube.com/embed/msUdwFjIBQk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body" wfd-id="36">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center" wfd-id="37">
@@ -63,7 +63,7 @@
                 </div>  
                 <div class="col-md-3" wfd-id="34">
                 <div class="card mb-3 shadow-sm" wfd-id="35">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <iframe width="100%" height="225" src="https://www.youtube.com/embed/kaMeEfffXL0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="card-body" wfd-id="36">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center" wfd-id="37">
