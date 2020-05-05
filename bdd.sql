@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `video` (
 	`descriptionVideo` varchar(100) DEFAULT NULL,
 	`prixVideo` float DEFAULT NULL,
 	`urlVideo` varchar(100) DEFAULT NULL,
+  `dureeVideo` float DEFAULT NULL,
 	`boolEstGratuite` boolean DEFAULT FALSE,
   PRIMARY KEY (`idVideo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
