@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+//VideoController
+Route::get('video/{n}', 'VideoController@viewVideo')->where('n', '[0-9]+');

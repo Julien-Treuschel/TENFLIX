@@ -6,29 +6,29 @@
       <div class="row" wfd-id="3">
         <h2> MUSIQUE </h2>
         <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-            <div class="col-md-3" wfd-id="44">
+            <!-- Boucle video -->
+            <div class="col-md-3" wfd-id="44">                       
                 <div class="card mb-3 shadow-sm" wfd-id="45">                         
-                    <iframe width="100%" height="225" src="https://www.youtube.com/embed/YQWA0kkT3lY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+                <!-- <a href="http://tenflix/video/ID video"> -->
+                    <a href="http://tenflix/video/0">
+                                              <!-- src="http://i1.ytimg.com/vi/Url video/maxresdefault.jpg" -->
+                    <img width="100%" height="225" src="http://i1.ytimg.com/vi/YQWA0kkT3lY/maxresdefault.jpg" alt="miniature" />
+                    </a>
+                    <div class="carousel-caption">
+                        <h3>Titre video !</h3>                        
+                    </div>                     
                     <div class="card-body" wfd-id="46">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center" wfd-id="47">
-                        <div class="btn-group" wfd-id="48">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="72">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" wfd-id="71">Edit</button>
-                        </div>
+                       <!-- class="card-text"> Titre video </p> -->
+                    <p class="card-text"> courte description !</p>
+                    <div class="d-flex justify-content-between align-items-center" wfd-id="47"> 
+                        <!-- class="text-muted">Minutes video</small>                   -->
                         <small class="text-muted">9 mins</small>
                     </div>
-                    </div>
+                    </div>            
                 </div>
                 </div>
                 <div class="col-md-3" wfd-id="39">
@@ -203,16 +203,13 @@
                 </div>
                 </div>
             </div>
-        </div>
-        
+        </div>  
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
         </a>
         </div>                 
   
