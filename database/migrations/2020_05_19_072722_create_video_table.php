@@ -12,7 +12,7 @@ class CreateVideoTable extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function (Blueprint $table) {
+        Schema::create('video', function (Blueprint $table) {
             $table->increments('idVideo');
             $table->string('themeVideo');
             $table->string('auteurVideo');
@@ -31,6 +31,6 @@ class CreateVideoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('videos');
+        Schema::drop('video');
     }
 }

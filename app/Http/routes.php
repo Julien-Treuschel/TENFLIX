@@ -19,9 +19,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-use App\Video;
 Route::get('/', function() {
-    $videos = Video::all();
+    $videos = App\Video::all();
 
     return view('welcome')->withVideos($videos);
 });

@@ -14,10 +14,6 @@ class VideoController extends Controller
      */
     public function viewVideo($n)
     {
-        // $urlss = DB::table('video')->pluck('urlVideo');
-        // foreach ($urls as $url) {
-        //     echo $url;
-        //     }
-        // return view('video');
+        return view('video');
     }
 }
