@@ -11,10 +11,10 @@
         <div class="carousel-inner">
             <div class="item active">
             <!-- Boucle video -->
+            @foreach($videos as $video)
             <div class="col-md-3" wfd-id="44">                       
                 <div class="card mb-3 shadow-sm" wfd-id="45">                         
-                <!-- <a href="http://tenflix/video/ID video"> -->
-                    @foreach($videos as $video)
+                <!-- <a href="http://tenflix/video/ID video"> -->                   
                     <?php $urlRenverse = strrev($video->urlVideo); 
                     $AarrayUrlCut = explode("/", $urlRenverse, 2);
                     $urlCut = $AarrayUrlCut[0];
@@ -34,10 +34,10 @@
                         <!-- class="text-muted">Minutes video</small>                   -->
                         <small class="text-muted">Temps à definir !</small>
                     </div>
-                    </div> 
-                    @endforeach            
+                    </div>                               
                 </div>
-                </div>                
+                </div>
+                @endforeach                 
             </div>
         </div>  
         <!-- Left and right controls -->
