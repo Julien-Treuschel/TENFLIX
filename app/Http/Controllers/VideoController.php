@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,6 +14,8 @@ class VideoController extends Controller
      */
     public function viewVideo($n)
     {
-        return view('video');
+        $video = DB::select('select * from video where idVideo = ?', [$n]);
+        
+        return view('video', ['video' => $video]);
     }
 }
