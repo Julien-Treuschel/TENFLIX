@@ -16,6 +16,9 @@
                 <!-- <a href="http://tenflix/video/ID video"> -->
                     <a href="http://tenflix/video/0">
                                               <!-- src="http://i1.ytimg.com/vi/Url video/maxresdefault.jpg" -->
+                        <!-- foreach ($urls as $url) {
+                        echo $url;
+                        } -->
                     <img width="100%" height="225" src="http://i1.ytimg.com/vi/YQWA0kkT3lY/maxresdefault.jpg" alt="miniature" />
                     </a>
                     <div class="carousel-caption">
@@ -215,4 +218,8 @@
   
     </div>
 </div>
+@foreach($videos as $video)
+<h1>{{ $video->urlVideo }}</h1>
+@endforeach
+
 @endsection
