@@ -13,6 +13,7 @@ class CreateVideoTable extends Migration
     public function up()
     {
         Schema::create('video', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->increments('idVideo')->unsigned();
             $table->string('themeVideo');
             $table->string('auteurVideo');
