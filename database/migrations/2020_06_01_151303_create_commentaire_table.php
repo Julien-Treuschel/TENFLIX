@@ -20,7 +20,7 @@ class CreateCommentaireTable extends Migration
         Schema::table('commentaire', function ($table) {
             $table->integer('idVideo')->unsigned();
             $table->integer('idUtilisateur')->unsigned();
-            $table->foreign('idVideo')->references('idVideo')->on('videos');
+            $table->foreign('idVideo')->references('idVideo')->on('video');
             $table->foreign('idUtilisateur')->references('id')->on('users');
         });
     }

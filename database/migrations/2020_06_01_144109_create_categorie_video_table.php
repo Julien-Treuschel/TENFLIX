@@ -12,14 +12,14 @@ class CreateCategorieVideoTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorieVideo', function (Blueprint $table) {
-            $table->increments('idCategorieVideo');
+        Schema::create('categorievideo', function (Blueprint $table) {
+            $table->increments('idCategorievideo');
         });
 
-        Schema::table('categorieVideo', function ($table) {
+        Schema::table('categorievideo', function ($table) {
             $table->integer('idVideo')->unsigned();
             $table->integer('idCategorie')->unsigned();
-            $table->foreign('idVideo')->references('idVideo')->on('videos');
+            $table->foreign('idVideo')->references('idVideo')->on('video');
             $table->foreign('idCategorie')->references('idCategorie')->on('categorie');
         });
     }
@@ -31,6 +31,6 @@ class CreateCategorieVideoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categorieVideo');
+        Schema::drop('categorievideo');
     }
 }
