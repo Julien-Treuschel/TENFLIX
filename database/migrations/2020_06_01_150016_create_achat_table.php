@@ -13,6 +13,7 @@ class CreateAchatTable extends Migration
     public function up()
     {
         Schema::create('achat', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->increments('idAchat');
             $table->dateTime('datAchat');
             $table->boolean('boolEstGratuite');        
