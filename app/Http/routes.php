@@ -19,17 +19,17 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-// Route::get('/', function() {
-//     $videos = App\Video::all();
+Route::get('/', function() {
+    $videos = App\Video::all();
 
-//     return view('welcome')->withVideos($videos);
-// });
-
-Route::get('/', 'WelcomeController@index');
+    return view('welcome')->withVideos($videos);
+});
 
 //VideoController
 Route::get('video/{n}', 'VideoController@viewVideo')->where('n', '[0-9]+');
 
-Route::get('/abonnement', 'AbonnementController@index');
+//userController
+Route::resource('user', 'UserController');
 
-Route::get('/abonnement/{n}', 'AbonnementController@AchatVideoOuAbonnement')->where('n', '[0-9]+');
+// Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
+// Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);

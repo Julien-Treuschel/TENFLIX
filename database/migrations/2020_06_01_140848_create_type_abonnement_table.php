@@ -13,7 +13,6 @@ class CreateTypeAbonnementTable extends Migration
     public function up()
     {
         Schema::create('type_abonnement', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
             $table->increments('IdTypeAbonnement');
             $table->string('typeAbonnement');
             $table->integer('dureeAbonnement');

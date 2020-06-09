@@ -19,20 +19,12 @@
                     $AarrayUrlCut = explode("/", $urlRenverse, 2);
                     $urlCut = $AarrayUrlCut[0];
                     $urlCut = strrev($urlCut);
-
                     ?>
-                    @if ($video->boolEstGratuite == 1)
-                        <a href= "./video/{{ $video->idVideo }}">  
-                    @else
-                        <a href= "./abonnement/{{ $video->idVideo }}">                   
-                    @endif
+                    <a href="./video/{{ $video->idVideo }}">
                                               <!-- src="http://i1.ytimg.com/vi/Url video/maxresdefault.jpg" -->                                                                                     
                     <img width="100%" height="225" src="http://i1.ytimg.com/vi/{{$urlCut}}/maxresdefault.jpg" alt="miniature" />
                     </a>
                     <div class="carousel-caption">
-                    @if ($video->boolEstGratuite == 0)
-                    <h2>Video payante !</h2>
-                    @endif
                         <h3>{{ $video->titreVideo }}</h3>                        
                     </div>                     
                     <div class="card-body" wfd-id="46">
