@@ -13,7 +13,6 @@ class CreateCommentaireTable extends Migration
     public function up()
     {
         Schema::create('commentaire', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
             $table->increments('idCommentaire');
             $table->string('commentaire');   
         });
