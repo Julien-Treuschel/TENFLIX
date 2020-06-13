@@ -13,10 +13,13 @@ class CreateAbonnementTable extends Migration
     public function up()
     {
         Schema::create('abonnement', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
             $table->increments('IdAbonnement');
             $table->dateTime('dateDebutAbonnement');
             $table->dateTime('dateFinAbonnement');
-            $table->boolean('boolEstAbo');  
+            $table->boolean('boolEstAbo');
+            $table->string('urlImage');
+            $table->float('prix');
         });
 
         Schema::table('abonnement', function ($table) {
