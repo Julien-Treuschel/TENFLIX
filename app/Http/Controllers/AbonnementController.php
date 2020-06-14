@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 
 class AbonnementController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $typesAbonnement = DB::select('select * from type_abonnement');

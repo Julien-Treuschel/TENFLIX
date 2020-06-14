@@ -33,3 +33,11 @@ Route::resource('user', 'UserController');
 //AbonnementController
 Route::get('/abonnement', 'AbonnementController@index');
 Route::get('/abonnement/{n}', 'AbonnementController@AchatVideoOuAbonnement')->where('n', '[0-9]+');
+
+//PayPal
+
+Route::get('payment-status',array('as'=>'payment.status','uses'=>'PaymentController@paymentInfo'));
+Route::get('payment',array('as'=>'payment','uses'=>'PaymentController@payment'));
+Route::get('payment-cancel', function () {
+   return 'Payment has been canceled';
+});

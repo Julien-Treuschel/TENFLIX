@@ -13,7 +13,18 @@
         <p class="card-text">Durée : {{round($typeAbonnement->dureeAbonnement /31)}} mois </p>
         <p class="card-text">{{$typeAbonnement->nbJourEssai}} Jours d'essai</p>
         <p class="card-text">{{$typeAbonnement->prix}}€</p>
-        <a href="#" class="btn btn-primary">S'ABONNER</a>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" name="frmTransaction" id="frmTransaction">
+          <input type="hidden" name="business" value="3ZLMN2B34944W">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="item_name" value="{{$typeAbonnement->typeAbonnement}}">
+          <input type="hidden" name="item_number" value="1">
+          <input type="hidden" name="amount" value="{{$typeAbonnement->prix}}">   
+          <input type="hidden" name="currency_code" value="EUR">   
+          <input type="hidden" name="cancel_return" value="http://tenflix">
+          <input type="hidden" name="return" value="http://tenflix">
+          <input class="btn btn-primary" type="submit" value="S'ABONNER">
+        </form>
+        <!--<script>document.frmTransaction.submit();</script>-->
       </div>
     </div>
   </div>                               
