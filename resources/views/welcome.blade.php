@@ -60,8 +60,7 @@
                     @if ($video->boolEstGratuite == 0 && $estAbonne == 0 && $videoAchete == 0)
                     <h3 class="display-4 text-center text-danger p-md-3">Video payante !</h3>  
                     <br/><br/>
-                    @endif
-                        <h3>{{ $video->titreVideo }}</h3>                        
+                    @endif                       
                     </div>                     
                     <div class="card-body" wfd-id="46">
                     <dt class="text-truncate">{{ $video->titreVideo }}</dt>
