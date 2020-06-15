@@ -4,9 +4,8 @@
 <div class="container-fluid">
     
       <div class="row" wfd-id="3">
-        <h2> MUSIQUE </h2>
+        <h3 class="display-3 text-center bg-primary">MUSIQUE</h3>
         <div id="myCarousel" class="carousel slide">
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
@@ -59,11 +58,14 @@
                     </a>
                     <div class="carousel-caption">
                     @if ($video->boolEstGratuite == 0 && $estAbonne == 0 && $videoAchete == 0)
-                    <h2>Video payante !</h2>
+                    <h3 class="display-4 text-center text-danger p-md-3">Video payante !</h3>  
+                    <br/><br/>
                     @endif
                         <h3>{{ $video->titreVideo }}</h3>                        
                     </div>                     
                     <div class="card-body" wfd-id="46">
+                    <dt class="text-truncate">{{ $video->titreVideo }}</dt>
+                    <br/>
                        <!-- class="card-text"> Titre video </p> -->
                     <p class="card-text">{{ $video->descriptionVideo }}</p>
                     <div class="d-flex justify-content-between align-items-center" wfd-id="47"> 

@@ -18,6 +18,8 @@ class CreateTypeAbonnementTable extends Migration
             $table->string('typeAbonnement');
             $table->integer('dureeAbonnement');
             $table->integer('nbJourEssai');
+            $table->string('urlImage');
+            $table->float('prix');
         });
     }
 
