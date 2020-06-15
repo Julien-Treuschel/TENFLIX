@@ -28,4 +28,5 @@ class WelcomeController extends Controller
         
         return view('Welcome', ['videos' => $videos]);          
     }
+        
 }
