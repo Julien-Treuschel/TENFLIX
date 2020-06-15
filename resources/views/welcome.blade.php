@@ -15,13 +15,41 @@
             <div class="col-md-3" wfd-id="44">                       
                 <div class="card mb-3 shadow-sm" wfd-id="45">                         
                 <!-- <a href="http://tenflix/video/ID video"> -->                   
-                    <?php $urlRenverse = strrev($video->urlVideo); 
+                    <?php 
+                    //id utilisateur :
+                    if (!NULL == Auth::user()){
+                        $id = Auth::user()->id;
+                        foreach($abonnements as $abonnement){
+                            $estAbonne = $abonnement->boolEstAbo;                           
+                        }                       
+                        foreach($achats as $achat){
+                            $videoAchete = $achat->idVideo; 
+                            if  ($videoAchete == $video->idVideo){
+                                $videoAchete = 1;
+                            } else {
+                                $videoAchete = 0;
+                            }
+                        }                        
+                    }
+                    else {
+                        $estAbonne = 0;
+                        $videoAchete = 0;
+                    }     
+                    if (!isset($estAbonne)){
+                        $estAbonne = 0;
+                    } 
+                    if (!isset($videoAchete)){
+                        $videoAchete = 0;
+                    }            
+
+                    //On recup un fragement d'url
+                    $urlRenverse = strrev($video->urlVideo); 
                     $AarrayUrlCut = explode("/", $urlRenverse, 2);
                     $urlCut = $AarrayUrlCut[0];
                     $urlCut = strrev($urlCut);
-
                     ?>
-                    @if ($video->boolEstGratuite == 1)
+                    
+                    @if ($video->boolEstGratuite == 1 || $estAbonne == 1 || $videoAchete == 1)
                         <a href= "./video/{{ $video->idVideo }}">  
                     @else
                         <a href= "./abonnement/{{ $video->idVideo }}">                   
@@ -30,7 +58,7 @@
                     <img width="100%" height="225" src="http://i1.ytimg.com/vi/{{$urlCut}}/maxresdefault.jpg" alt="miniature" />
                     </a>
                     <div class="carousel-caption">
-                    @if ($video->boolEstGratuite == 0)
+                    @if ($video->boolEstGratuite == 0 && $estAbonne == 0 && $videoAchete == 0)
                     <h2>Video payante !</h2>
                     @endif
                         <h3>{{ $video->titreVideo }}</h3>                        

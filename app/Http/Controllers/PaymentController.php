@@ -9,8 +9,8 @@ use App\Payment;
 
 class PaymentController extends Controller {
     public function payment(Request $request){
-           $product=Product::find($request->id);    
-      return view('payment',compact('product'));
+           //$product=Product::find($request->id);    
+      return view('abonnement');
     }
     public function paymentInfo(Request $request){        
         if($request->tx){
@@ -25,7 +25,7 @@ class PaymentController extends Controller {
                 $payment->save();
                 $payment_id=$payment->id;
             }
-        return 'Pyament has been done and your payment id is : '.$payment_id;
+        return 'Payment has been done and your payment id is : '.$payment_id;
         }else{
             return 'Payment has failed';
         }

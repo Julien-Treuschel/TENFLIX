@@ -33,6 +33,9 @@ Route::resource('user', 'UserController');
 //AbonnementController
 Route::get('/abonnement', 'AbonnementController@index');
 Route::get('/abonnement/{n}', 'AbonnementController@AchatVideoOuAbonnement')->where('n', '[0-9]+');
+Route::get('/validationAbonnement/{n}', 'AbonnementController@ValidationAchatAbonnement')->where('n', '[0-9]+');
+Route::get('/validationAbonnement', 'AbonnementController@ValidationAchatAbonnement2');
+Route::get('/validationVideo/{n}', 'AbonnementController@ValidationAchatVideo')->where('n', '[0-9]+');
 
 //PayPal
 
