@@ -13,11 +13,13 @@ if (!NULL == Auth::user()){
   }
   foreach($achats as $achat){
       $videoAchete = $achat->idVideo; 
-      if  ($videoAchete == $video->idVideo){
+      if ($extension != "abonnement"){
+        if  ($videoAchete == $video->idVideo){
           $videoAchete = 1;
-      } else {
+        } else {
           $videoAchete = 0;
-      }
+       }
+      }      
   }                        
 }
 else {
