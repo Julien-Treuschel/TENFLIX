@@ -1,3 +1,7 @@
+<?php  
+$abonnement = activeMenuAbonnement();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -59,6 +63,9 @@
                         <li><a href="<?php echo e(url('/login')); ?>">Connexion</a></li>
                         <li><a href="<?php echo e(url('/register')); ?>">Inscription</a></li>
                     <?php else: ?>
+                        <?php if ($abonnement == 0) : ?>
+                        <li><a href="<?php echo e(url('/abonnement')); ?>">S'Abonner</a></li>
+                        <?php endif; ?>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
