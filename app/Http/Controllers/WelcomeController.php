@@ -20,13 +20,15 @@ class WelcomeController extends Controller
             $achats = DB::select('select idVideo from achat where idUtilisateur = '.$id);
             $abonnements = DB::select('select boolEstAbo from abonnement where idUtilisateur = '.$id);
             $videos = DB::select('select * from video');
+            $categorievideos = DB::select('select * from categorievideo'); 
+            $categories = DB::select('select * from categorie'); 
 
-            return view('Welcome', ['videos' => $videos,'abonnements' => $abonnements,'achats' => $achats]);  
+            return view('Welcome', ['videos' => $videos,'abonnements' => $abonnements,'achats' => $achats,'categorievideos' => $categorievideos,'categories' => $categories]);  
         }   
         
         $videos = DB::select('select * from video');
         
-        return view('Welcome', ['videos' => $videos]);          
+        return view('Welcome', ['videos' => $videos,]);          
     }
         
 }
