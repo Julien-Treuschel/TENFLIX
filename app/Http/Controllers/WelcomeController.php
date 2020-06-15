@@ -27,7 +27,9 @@ class WelcomeController extends Controller
         }   
         
         $videos = DB::select('select * from video');
-        
-        return view('Welcome', ['videos' => $videos,]);          
+        $categorievideos = DB::select('select * from categorievideo'); 
+        $categories = DB::select('select * from categorie'); 
+
+        return view('Welcome', ['videos' => $videos,'categorievideos' => $categorievideos,'categories' => $categories]);          
     }
 }

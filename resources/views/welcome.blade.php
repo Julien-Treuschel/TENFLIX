@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <?php
 //<!-- Boucle categories -->
 foreach ($categories as $categorie) {
@@ -79,7 +80,6 @@ foreach ($categories as $categorie) {
                                                         <small class="text-muted">Temps à definir !</small>
                                                     </div>
                                                 </div>
-
                                         </div>
                                     </div>
                                 </div>
