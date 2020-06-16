@@ -48,11 +48,12 @@ if ($estAbonne == 1 || $videoAchete == 1){
   <div class="col-sm-3">
     <div class="card">
     <img class="card-img-top" src="{{asset('images/'.$typeAbonnement->urlImage)}}" alt="Card image cap">
+    <hr>
       <div class="card-body">
-        <h5 class="card-title">{{$typeAbonnement->typeAbonnement}}</h5>
+        <h5 class="card-title"><mark>{{$typeAbonnement->typeAbonnement}}</h5>
         <p class="card-text">Durée : {{round($typeAbonnement->dureeAbonnement /31)}} mois </p>
         <p class="card-text">{{$typeAbonnement->nbJourEssai}} Jours d'essai</p>
-        <p class="card-text">{{$typeAbonnement->prix}}€</p>
+        <p class="text-danger"><strong>{{$typeAbonnement->prix}}</strong> €</p>
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" name="frmTransaction" id="frmTransaction">
           <input type="hidden" name="business" value="sb-x07tp2209206@business.example.com">
           <input type="hidden" name="cmd" value="_xclick">
@@ -84,12 +85,14 @@ if ($estAbonne == 1 || $videoAchete == 1){
 <div class="row">
   <div class="col-sm-3">
     <div class="card">
+      <br/><br/><br/><br/><br/><br/><br/>
     <img class="card-img-top" width="70%" height="70%" src="http://i1.ytimg.com/vi/{{$urlCut}}/maxresdefault.jpg" alt="miniature">
       <div class="card-body">
-        <p class="card-text">Preferez vous acheter la video ?</p>
+        <hr>
+        <p class="card-text"><mark>Preferez vous acheter la video ?</p>
         <p class="card-text">Titre : {{ $laVideo->titreVideo }}</p>
         <p class="card-text">Description : {{ $laVideo->descriptionVideo }}</p>
-        <p class="card-text">{{$laVideo->prixVideo}}€</p>
+        <p class="text-danger"><strong>{{$laVideo->prixVideo}}</strong> €</p>
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" name="frmTransaction" id="frmTransaction">
           <input type="hidden" name="business" value="3ZLMN2B34944W">
           <input type="hidden" name="cmd" value="_xclick">

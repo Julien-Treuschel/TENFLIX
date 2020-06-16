@@ -24,6 +24,9 @@ Route::get('/', 'WelcomeController@index');
 //VideoController
 Route::get('video/{n}', 'VideoController@viewVideo')->where('n', '[0-9]+');
 
+//CommentaireController
+Route::post('/store/{n}', 'CommentaireController@store');
+
 //userController
 Route::resource('user', 'UserController');
 Route::get('/user/{n}/parametres', 'UserController@parametres');

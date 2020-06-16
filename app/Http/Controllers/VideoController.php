@@ -14,8 +14,10 @@ class VideoController extends Controller
      */
     public function viewVideo($n)
     {
+        $id = auth()->id();
         $video = DB::select('select * from video where idVideo = ?', [$n]);
+        $commentaires = DB::select('select u.name, c.commentaire from users as u, commentaire as c where u.id = c.idUtilisateur and c.idVideo = ?', [$n]);
         
-        return view('video', ['video' => $video]);
+        return view('video', ['video' => $video,'commentaires' => $commentaires]);
     }
 }

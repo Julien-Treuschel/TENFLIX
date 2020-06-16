@@ -65,10 +65,7 @@ foreach ($categories as $categorie) {
                                                     <img width="100%" height="225" src="http://i1.ytimg.com/vi/{{$urlCut}}/maxresdefault.jpg" alt="miniature" />
                                                 </a>
                                                 <div class="carousel-caption">
-                                                    @if ($video->boolEstGratuite == 0 && $estAbonne == 0 && $videoAchete == 0)
-                                                    <h3 class="display-4 text-center text-danger p-md-3">Video payante !</h3>
-                                                    <br /><br />
-                                                    @endif
+                                                    <!-- ancien "video payante" -->
                                                 </div>
                                                 <div class="card-body" wfd-id="46">
                                                     <dt class="text-truncate">{{ $video->titreVideo }}</dt>
@@ -80,6 +77,11 @@ foreach ($categories as $categorie) {
                                                         <small class="text-muted">Temps à definir !</small>
                                                     </div>
                                                 </div>
+                                                <br/>
+                                                @if ($video->boolEstGratuite == 0 && $estAbonne == 0 && $videoAchete == 0)
+                                                <p><code>Video payante !</code></p>
+                                                   
+                                                    @endif
                                         </div>
                                     </div>
                                 </div>

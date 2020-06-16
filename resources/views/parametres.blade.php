@@ -5,6 +5,7 @@
 <?php  
 $abonnement = activeMenuAbonnement();
 $typeAbonnement = typeAbonnement();
+$racine = url('/');
 ?>
    
 <div class="col-sm-offset-4 col-sm-4">
@@ -21,7 +22,7 @@ $typeAbonnement = typeAbonnement();
 						<br><br>	
 						<?php if ($abonnement >= 1) : ?>
 
-							<form onsubmit="return confirm('Voulez vous vraiment annuler votre abonnement ?');" action="/supprAbonnement/{{$user->id}}" method="post">
+							<form onsubmit="return confirm('Voulez vous vraiment annuler votre abonnement ?');" action="{{$racine}}/supprAbonnement/{{$user->id}}" method="post">
 								{{ csrf_field() }}								
 								<input type="submit" value="Annuler mon abonnement" class="btn btn-danger btn-block">
 							</form>
