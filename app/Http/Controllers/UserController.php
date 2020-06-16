@@ -75,7 +75,7 @@ class UserController extends Controller
 	{
 		$this->userRepository->destroy($id);
 
-		return back();
+		return redirect('/');
 	}
 
 }

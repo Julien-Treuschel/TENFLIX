@@ -24,9 +24,9 @@ class CreateUsersTable extends Migration
             $table->integer('code_postal');
             $table->integer('num_rue');
             $table->string('rue');
-            $table->integer('id_abonnement');
+            $table->integer('id_abonnement');           
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamps();           
         });
     }
 

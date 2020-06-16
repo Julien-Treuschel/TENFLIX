@@ -26,7 +26,7 @@ class CreateAbonnementTable extends Migration
             $table->integer('idTypeAbonnement')->unsigned();
             $table->integer('idUtilisateur')->unsigned();
             $table->foreign('idTypeAbonnement')->references('idTypeAbonnement')->on('type_abonnement');
-            $table->foreign('idUtilisateur')->references('id')->on('users');
+            $table->foreign('idUtilisateur')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

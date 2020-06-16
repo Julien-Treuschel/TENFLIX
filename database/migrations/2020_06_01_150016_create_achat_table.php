@@ -23,7 +23,7 @@ class CreateAchatTable extends Migration
             $table->integer('idVideo')->unsigned();
             $table->integer('idUtilisateur')->unsigned();
             $table->foreign('idVideo')->references('idVideo')->on('video');
-            $table->foreign('idUtilisateur')->references('id')->on('users');
+            $table->foreign('idUtilisateur')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
