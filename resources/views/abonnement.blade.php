@@ -5,6 +5,7 @@
 <?php 
 $id = Auth::user()->id;
 $extension = substr( strrchr(url()->current(), '/')  ,1);
+$racine = url('/');
 
 if (!NULL == Auth::user()){
   $id = Auth::user()->id;
@@ -61,9 +62,9 @@ if ($estAbonne == 1 || $videoAchete == 1){
           <input type="hidden" name="currency_code" value="EUR">   
           <input type="hidden" name="cancel_return" value="{{url()->current()}}">
           @if ($extension != "abonnement")
-          <input type="hidden" name="return" value="./validationAbonnement/{{$extension}}?id={{$id}}&typeAbonnement={{$typeAbonnement->IdTypeAbonnement}}&duree={{$typeAbonnement->dureeAbonnement + $typeAbonnement->nbJourEssai}}/">
+          <input type="hidden" name="return" value="{{$racine}}/validationAbonnement/{{$extension}}?id={{$id}}&typeAbonnement={{$typeAbonnement->IdTypeAbonnement}}&duree={{$typeAbonnement->dureeAbonnement + $typeAbonnement->nbJourEssai}}/">
           @else 
-          <input type="hidden" name="return" value="./validationAbonnement?id={{$id}}&typeAbonnement={{$typeAbonnement->IdTypeAbonnement}}&duree={{$typeAbonnement->dureeAbonnement + $typeAbonnement->nbJourEssai}}/">
+          <input type="hidden" name="return" value="{{$racine}}/validationAbonnement?id={{$id}}&typeAbonnement={{$typeAbonnement->IdTypeAbonnement}}&duree={{$typeAbonnement->dureeAbonnement + $typeAbonnement->nbJourEssai}}/">
           @endif
           <input class="btn btn-primary" type="submit" value="S'ABONNER">
         </form>
@@ -97,7 +98,7 @@ if ($estAbonne == 1 || $videoAchete == 1){
           <input type="hidden" name="amount" value="{{$laVideo->prixVideo}}">   
           <input type="hidden" name="currency_code" value="EUR">   
           <input type="hidden" name="cancel_return" value="{{url()->current()}}">
-          <input type="hidden" name="return" value="./validationVideo/{{$extension}}?id={{$id}}&estGratuite={{$laVideo->boolEstGratuite}}/">
+          <input type="hidden" name="return" value="{{$racine}}/validationVideo/{{$extension}}?id={{$id}}&estGratuite={{$laVideo->boolEstGratuite}}/">
           <input class="btn btn-primary" type="submit" value="ACHETER">
         </form>
       </div>
