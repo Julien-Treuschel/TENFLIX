@@ -74,8 +74,8 @@ $abonnement = activeMenuAbonnement();
                             <ul class="dropdown-menu" role="menu">
                             <?php $id = Auth::user()->id;?>
                                 <li><a href="<?php echo e(url('user/'.$id.'/edit')); ?>"><i class="fa fa-btn fa-user"></i>Mes informations</a></li>
+                                <li><a href="<?php echo e(url('user/'.$id.'/parametres')); ?>"><i class="fa fa-btn fa-cog"></i>Paramètres</a></li>                               
                                 <li><a href="<?php echo e(url('/logout')); ?>"><i class="fa fa-btn fa-sign-out"></i>Déconnection</a></li>
-
                             </ul>
                         </li>
                     <?php endif; ?>

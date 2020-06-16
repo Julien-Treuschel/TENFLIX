@@ -71,4 +71,12 @@ class AbonnementController extends Controller
 
         return redirect('./video/'.$n);
     }
+
+    public function supprAbonnement($id)
+	{		
+
+		DB::table('abonnement')->where('idUtilisateur', '=', $id)->delete();
+
+		return redirect(url('user/'.$id.'/parametres'));
+	}
 }

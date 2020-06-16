@@ -57,6 +57,13 @@ class UserController extends Controller
 		return view('edit',  compact('user'));
 	}
 
+	public function parametres($id)
+	{		
+		$user = $this->userRepository->getById($id);
+				
+		return view('parametres',  compact('user'));
+	}	
+
 	public function update(UserUpdateRequest $request, $id)
 	{
 		$this->userRepository->update($id, $request->all());

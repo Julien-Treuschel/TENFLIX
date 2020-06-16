@@ -26,6 +26,7 @@ Route::get('video/{n}', 'VideoController@viewVideo')->where('n', '[0-9]+');
 
 //userController
 Route::resource('user', 'UserController');
+Route::get('/user/{n}/parametres', 'UserController@parametres');
 
 // Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'UserController@edit']);
 // Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
@@ -36,6 +37,7 @@ Route::get('/abonnement/{n}', 'AbonnementController@AchatVideoOuAbonnement')->wh
 Route::get('/validationAbonnement/{n}', 'AbonnementController@ValidationAchatAbonnement')->where('n', '[0-9]+');
 Route::get('/validationAbonnement', 'AbonnementController@ValidationAchatAbonnement2');
 Route::get('/validationVideo/{n}', 'AbonnementController@ValidationAchatVideo')->where('n', '[0-9]+');
+Route::post('/supprAbonnement/{n}', 'AbonnementController@supprAbonnement');
 
 //PayPal
 
