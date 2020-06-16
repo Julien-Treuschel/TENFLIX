@@ -21,15 +21,17 @@ $typeAbonnement = typeAbonnement();
 						<br><br>	
 						<?php if ($abonnement >= 1) : ?>
 
-							<form action="/supprAbonnement/{{$user->id}}" method="post">
+							<form onsubmit="return confirm('Voulez vous vraiment annuler votre abonnement ?');" action="/supprAbonnement/{{$user->id}}" method="post">
 								{{ csrf_field() }}								
-								<input type="submit" value="Annuler mon abonnement" class="btn btn-danger btn-block" onclick="return confirm(\'Voulez vous vraiment annuler votre abonnement ?\'">
+								<input type="submit" value="Annuler mon abonnement" class="btn btn-danger btn-block">
 							</form>
 
 						<?php else : ?>
-						{!! Form::model(['method' => 'put', 'route' => ['user.updateAbonnement', $user->id]]) !!}
-							{!! Form::submit('Annuler mon abonnement', ['class' => 'btn btn-danger btn-block','disabled' => 'disabled', 'onclick' => 'return confirm(\'Voulez vous vraiment annuler votre abonnement ?\')']) !!}
-						{!! Form::close() !!}
+
+							<form action="/supprAbonnement/{{$user->id}}" method="post">																
+								<input type="submit" value="Annuler mon abonnement" class="btn btn-danger btn-block" disabled ="disabled">
+							</form>
+
 						<?php endif; ?>
 						<hr width="500" size="4">
 						Supprimer le compte ?
